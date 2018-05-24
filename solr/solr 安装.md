@@ -11,6 +11,7 @@ solr7.3 安装
   http://198.*.*.179:8983/solr/#/  
 5  创建核心或者集合  
    /zyc/program/solr/bin create -c test  
+   生成的文件在/zyc/program/solr/server/solr/test  下面
 6 给sorl web 添加登陆密码  (相关文档https://www.bbsmax.com/A/Gkz12Dj6JR/)  
    第一步新建  
   /zyc/program/solr/server/etc/realm.properties  内容   
