@@ -5,7 +5,7 @@
     firewall-cmd --state
     
     拒绝访问
-    firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="49.232.8.38" port protocol="tcp" port="80" reject"
+    firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="49.232.8.20" port protocol="tcp" port="80" reject"
     
     重新载入一下防火墙设置，使设置生效
     firewall-cmd --reload
@@ -15,7 +15,7 @@
     
     
     删除拒绝访问
-    firewall-cmd --permanent --remove-rich-rule="rule family="ipv4" source address="49.232.8.38" port protocol="tcp" port="80" reject"
+    firewall-cmd --permanent --remove-rich-rule="rule family="ipv4" source address="49.232.8.20" port protocol="tcp" port="80" reject"
     
     重新载入一下防火墙设置，使设置生效
     firewall-cmd --reload
@@ -34,13 +34,13 @@
     iptables -L INPUT  命令是否有
     
     拒绝访问
-    iptables -I INPUT -s 49.232.8.38 -j DROP   
+    iptables -I INPUT -s 49.232.8.20 -j DROP   
     
     效果是ping 不通   访问web也访问不了
     
     
     删除拒绝访问
-    iptables -D INPUT -s 49.232.8.38 -j DROP
+    iptables -D INPUT -s 49.232.8.20 -j DROP
     
     
     查看拒绝访问
